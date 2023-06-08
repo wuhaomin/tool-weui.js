@@ -531,7 +531,7 @@ function datePicker(options) {
         let Y = findBy(date, 'value', year);
         if (!Y) {
             Y = {
-                label: year + '年',
+                label: year ,// + '年',
                 value: year,
                 children: []
             };
@@ -540,14 +540,14 @@ function datePicker(options) {
         let M = findBy(Y.children, 'value', month);
         if (!M) {
             M = {
-                label: month + '月',
+                label: month ,//  + '月',
                 value: month,
                 children: []
             };
             Y.children.push(M);
         }
         M.children.push({
-            label: day + '日',
+            label: day  ,// + '日',
             value: day
         });
     }
